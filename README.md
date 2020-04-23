@@ -62,9 +62,10 @@ export const fetchShow = () => {
  // App.js
 useEffect(() => {
   fetchShow
-    .then(res => {
-      // set state with the data
-    }
+        .then(res => {
+          setShow(res.data);
+          setSeasons(formatSeasons(res.data._embedded.episodes));
+        });
 }, []);
 ```
 
