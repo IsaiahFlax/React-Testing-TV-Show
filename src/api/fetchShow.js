@@ -6,7 +6,7 @@ export const fetchShow = () => {
             "https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes"
           )
       .then(res => { 
-          console.log(res)
+          console.log('res', res)
           return res;
-        }) // or res.data, however you want to set that up
+        }).catch(err=>{return err}) // or res.data, however you want to set that up
   }
